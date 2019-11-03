@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <title>Guest List Application</title>
+    </head>
+    <body>
+        <!-- splash screen################################################################# -->
+        <div class="splash" id="splash">
+                <div class="spalsh-logo">
+                    <img src="img/logo.png">                
+                </div>
+                <div class="spalsh-banner">
+                    GUESS LIST
+                </div>
+
+                <div class="splash-loading">
+                    <div class="load-txt">LOADING...</div>
+                    <div class="load-div">
+                        <div id="loading"></div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- singnin screen############################################################# -->
+        <div class="home" id="hm">
+                <div class="home-logo">
+                    <img src="img/logo.png">    
+                </div>
+                <div class="home-banner">GUEST LIST</div>
+
+                <div class="home-authin">
+                    <div class="authin-div">
+                        <input type="email" name="" class="authin-input" placeholder="Email" id="signin-email">
+                    </div>
+                     <div class="authin-div">
+                        <input type="password" name="" class="authin-input" placeholder="Password" id="signin-password">
+                    </div>
+
+                    <div class="authin-btn">
+                        <button class="authin-input" id="signin">
+                            LOGIN
+                        </button>
+                    </div>                
+                </div>
+
+                <div class="col-xs-12 padding">
+                    <div class="col-xs-5">
+                        <div class="border"></div>
+                    </div>
+                    <div class="col-xs-2 text-center ">OR</div>
+                    <div class="col-xs-5">
+                        <div class="border"></div>
+                    </div>
+                </div>
+
+                <div class="home-authin">           
+                    <div class="authin-btn" id="create-account">
+                        <div class="authin-inp">
+                            CREATE ACCOUNT
+                        </div>
+                    </div>                
+                </div>            
+        </div>
+
+        <!-- sign up screen########################################################## -->
+        <div class="register" id="register">
+                <div class="home-logo">
+                    <img src="img/logo.png">    
+                </div>
+                <div class="home-banner">GUEST LIST</div>
+
+                <div class="home-authin">
+                    <div class="authin-div">
+                        <input type="text" name="" class="authin-input" placeholder="Firstname" id="signup-fn">
+                    </div>
+                     <div class="authin-div">
+                        <input type="text" name="" class="authin-input" placeholder="Lastname" id="signup-ln">
+                    </div>
+                    <div class="authin-div">
+                        <input type="email" name="" class="authin-input" placeholder="Email" id="signup-em">
+                    </div>
+                    <div class="authin-div">
+                        <input type="password" name="" class="authin-input" placeholder="Password" id="signup-pw">
+                    </div>
+
+                    <div class="authin-btn">
+                        <button class="authin-input" id="register-btn">
+                            CREATE ACCOUNT
+                        </button>
+                    </div>
+
+                    <div class="home-foot">
+                        Already a registered? <span id="hf">Tap here to sign in.</span>
+                    </div>
+
+
+                </div>                 
+        </div>
+
+        <div class="cover" id="cover"></div>
+
+        <!--  home screen################################################################# -->
+        <div class="index" id="index">
+                <div class="bar">
+                   <div class="col-xs-3">
+                        <!-- <div class="back" id="close-index">
+                            <img src="img/back.png">
+                        </div>   -->                      
+                   </div>
+                   <div class="col-xs-6">
+                       <div class="head">
+                           DASHBOARD
+                       </div>
+                   </div>
+                   <div class="col-xs-3"></div>                    
+                </div>
+
+
+                <div class="pic">
+                    <img src="img/user.png" id="pic">                    
+                </div>
+                <div class="greet">
+                    Hi, Uwem
+                </div>
+
+                <div class="index-menu">
+                        <div class="col-xs-6">
+                            <div class="menu-box invite" id="create-btn">
+                                <div class="col-xs-12 text-center">
+                                    <img src="img/create.png">
+                                </div>
+                                <div class="col-xs-12 text-center space">
+                                   CREATE
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <div class="menu-box create" id="invite-btn">
+                                <div class="col-xs-12 text-center">
+                                    <img src="img/invite.png">
+                                </div>
+                                <div class="col-xs-12 text-center space">
+                                   INVITE
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <div class="menu-box search" id="search-btn">
+                                <div class="col-xs-12 text-center">
+                                    <img src="img/search.png">
+                                </div>
+                                <div class="col-xs-12 text-center space">
+                                   SEARCH
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <div class="menu-box list" id="list-btn">
+                                <div class="col-xs-12 text-center">
+                                    <img src="img/list.png">
+                                </div>
+                                <div class="col-xs-12 text-center space">
+                                   VIEW
+                                </div>
+                            </div>
+                        </div>                                            
+                </div>
+        </div>
+
+        <!--  search screen################################################################### -->
+        <div class="search-page" id="search-page">
+                <div class="bar">
+                   <div class="col-xs-3">
+                        <div class="back" id="close-search">
+                            <img src="img/back.png">
+                        </div>                        
+                   </div>
+                   <div class="col-xs-6">
+                       <div class="head">
+                           SEARCH LIST
+                       </div>
+                   </div>
+                   <div class="col-xs-3"></div>                    
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="search-div">
+                        <input type="text" name="" class="authin-input" placeholder="Enter guest firstname." id="search-list">
+                    </div>                    
+                </div>
+                <div class="col-xs-12">
+                    <div id="searchlist">                        
+                        
+                    </div> 
+                </div>
+        </div>
+
+
+        <!--  list screen################################################################## -->
+        <div class="list-page" id="list-page">
+                <div class="bar">
+                   <div class="col-xs-3">
+                        <div class="back" id="close-list">
+                            <img src="img/back.png">
+                        </div>                        
+                   </div>
+                   <div class="col-xs-6">
+                       <div class="head">
+                           FULL LIST
+                       </div>
+                   </div>
+                   <div class="col-xs-3"></div>                    
+                </div>
+                 <div class="col-xs-12 text-center" id="fulllist-header">
+                    
+                </div>
+                <div class="col-xs-12">
+                    <div id="fulllist">                        
+                        
+                    </div> 
+                </div>
+        </div>
+
+        <!--  invite screen################################################################## -->
+        <div class="invite-page" id="invite-page">
+                <div class="bar">
+                   <div class="col-xs-3">
+                        <div class="back" id="close-invite">
+                            <img src="img/back.png">
+                        </div>                        
+                   </div>
+                   <div class="col-xs-6">
+                       <div class="head">
+                           INVITE GUEST
+                       </div>
+                   </div>
+                   <div class="col-xs-3"></div>                    
+                </div>
+
+                <div class="invite-div">
+                     <div class="authin-div">
+                            <input type="text" name="" class="authin-input" placeholder="Title" id="guest-title">
+                        </div>
+                    <div class="authin-div">
+                            <input type="text" name="" class="authin-input" placeholder="Firstname" id="guest-firstname">
+                        </div>
+                         <div class="authin-div">
+                            <input type="text" name="" class="authin-input" placeholder="Lastname" id="guest-lastname">
+                        </div>
+                        <div class="authin-div">
+                            <input type="email" name="" class="authin-input" placeholder="Table Number (Optional)" id="guest-no">
+                        </div>                   
+
+                        <div class="authin-btn">
+                            <button class="authin-input" id="invitebtn">
+                                INVITE GUEST
+                            </button>
+                        </div>
+                    </div>
+        </div>
+
+        <!--  create screen################################################################# -->
+        <div class="create-page" id="create-page">
+                <div class="bar">
+                   <div class="col-xs-3">
+                        <div class="back" id="close-create">
+                            <img src="img/back.png">
+                        </div>                        
+                   </div>
+                   <div class="col-xs-6">
+                       <div class="head">
+                           CREATE EVENT
+                       </div>
+                   </div>
+                   <div class="col-xs-3"></div>                    
+                </div>
+
+                <div class="invite-div">
+                     <div class="authin-div">
+                            <input type="text" name="" class="authin-input" placeholder="Name of Event" id="event-name">
+                        </div>
+                    <div class="authin-div">
+                            <input type="text" name="" class="authin-input" placeholder="Location of Event" id="event-location">
+                        </div>
+                         <div class="authin-div">
+                            <input type="text" name="" class="authin-input" placeholder="No. of expected guest" id="event-guest">
+                        </div>
+                        <div class="authin-div">
+                            <input type="email" name="" class="authin-input" placeholder="No. of Table" id="event-table">
+                        </div>                   
+
+                        <div class="authin-btn">
+                            <button class="authin-input" id="createnew-event">
+                                CREATE NEW EVENT
+                            </button>
+                        </div>
+                    </div>
+        </div>
+
+         <!--  edit screen################################################################## -->
+        <div class="edit-page" id="edit-page">
+                <div class="bar">
+                   <div class="col-xs-3">
+                        <div class="back" id="close-edit">
+                            <img src="img/back.png">
+                        </div>                        
+                   </div>
+                   <div class="col-xs-6">
+                       <div class="head">
+                                    EDIT GUEST INFO
+                       </div>
+                   </div>
+                   <div class="col-xs-3"></div>                    
+                </div>
+
+                <div class="invite-div">
+                     <div class="authin-div">
+                            <input type="text" name="" class="authin-input" placeholder="Title" id="edit-title">
+                        </div>
+                    <div class="authin-div">
+                            <input type="text" name="" class="authin-input" placeholder="Firstname" id="edit-firstname">
+                        </div>
+                         <div class="authin-div">
+                            <input type="text" name="" class="authin-input" placeholder="Lastname" id="edit-lastname">
+                        </div>
+                        <div class="authin-div">
+                            <input type="email" name="" class="authin-input" placeholder="Table Number (Optional)" id="edit-no">
+                        </div>                   
+
+                        <div class="authin-btn">
+                            <button class="authin-input" id="invitebtn">
+                                INVITE GUEST
+                            </button>
+                        </div>
+                    </div>
+        </div>
+
+
+        <!-- select event############################################################################ -->
+        <div class="select-cover" id="select-cover"></div>
+
+
+        <div class="select-event" id="select-event">
+            <div class="col-xs-12">
+                <span class="event-head">SELECT AN EVENT</span>
+                <div id="eventlist">                    
+                </div>
+            </div>            
+        </div>     
+
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+         <script type="text/javascript" src="js/dbase.js"></script>
+        <script type="text/javascript" src="js/read.js"></script>
+    </body>
+</html>
